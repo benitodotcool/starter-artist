@@ -1,7 +1,10 @@
 import {defineConfig} from 'sanity'
 import {deskTool} from 'sanity/desk'
+import {media} from 'sanity-plugin-media'
+import {noteField} from 'sanity-plugin-note-field'
 import {visionTool} from '@sanity/vision'
 import {schemaTypes} from './schemas'
+import { structure } from './desk'
 
 export default defineConfig({
   name: 'default',
@@ -10,7 +13,7 @@ export default defineConfig({
   projectId: 'rv92quiy',
   dataset: 'production',
 
-  plugins: [deskTool(), visionTool()],
+  plugins: [deskTool({structure}), visionTool(), noteField(), media()],
 
   schema: {
     types: schemaTypes,
