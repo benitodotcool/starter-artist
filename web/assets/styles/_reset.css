@@ -1,0 +1,112 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  /* border: 1px solid black !important; */
+}
+
+html {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-size-adjust: none;
+}
+
+body {
+  font-feature-settings: "kern";
+  overscroll-behavior: none;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+  /* color: inherit; */
+  outline: 0;
+}
+
+a:active {
+  outline: 0;
+}
+
+a:hover {
+  outline: 0;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input {
+  appearance: none;
+  -webkit-appearance: none;
+  border-radius: 0;
+  border: none;
+  background-image: none;
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+input:focus {
+  outline: none;
+}
+
+/* input:-webkit-autofill.input__light,
+input:-webkit-autofill:focus.input__light {
+  box-shadow: 0 0 0 1000px #ffffff inset;
+  -webkit-text-fill-color: #000000;
+} */
+
+*::placeholder {
+  color: inherit;
+  opacity: 1;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+em {
+  font-style: normal;
+}
+
+button {
+  background-color: inherit;
+  outline: none;
+  cursor: pointer;
+}
+
+button,
+input,
+textarea,
+section {
+  font: inherit;
+}

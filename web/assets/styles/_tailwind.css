@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+@layer components {
+  /* TYPO */
+  .typo-xs {
+    @apply text-xs tracking-tight uppercase;
+  }
+
+  /* GLOBAL */
+  .hw-full {
+    @apply h-full w-full;
+  }
+  .flex-center {
+    @apply flex items-center justify-center;
+  }
+
+  /* PORTABLE-TEXT */
+  .portable-link {
+    @apply inline-block ease-in-expo opacity-25 hover:opacity-100;
+  }
+}

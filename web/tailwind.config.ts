@@ -8,7 +8,14 @@ const config: Config = {
   ],
   theme: {
     extend: {
-
+      fontSize: {
+        xs: "14px",
+      },
+      extend: {
+        spacing: {
+          5: "5px",
+        },
+      },
     },
   },
   plugins: [],

@@ -1,8 +1,22 @@
+import { groq } from "next-sanity";
+import { sanityFetch } from "@/lib/sanity";
+import { THome } from "@/types";
 
-export default function Home() {
+export default async function Page() {
+  const data = await sanityFetch<THome>({
+    query: QUERY,
+  });
+
   return (
     <div className="flex min-h-screen flex-col items-center">
-      <h1 className='uppercase'>starter</h1>
+      <h1>{data.title}</h1>
     </div>
   )
 }
+
+const QUERY = groq`
+  *[_type == 'home'][0] {
+    title,
+  }
+`;
+
